@@ -10,7 +10,10 @@ set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
-set autoindent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set wmh=0
 set visualbell t_vb=
 set novisualbell
