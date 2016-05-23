@@ -1,27 +1,24 @@
-set nocompatible
-syntax on
 set nu
-set mouse=a
-set confirm
-set sc
-set wmnu
-set wildmode=list:longest,full
-set nohlsearch
-set incsearch
-set ignorecase
-set smartcase
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set wmh=0
-set visualbell t_vb=
-set novisualbell
-filetype plugin on
-set grepprg=grep\ -nH\ $*
-filetype indent on
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-set iskeyword+=:
-set bomb
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+Bundle 'gmarik/vundle'
+syntax on
 set backspace=indent,eol,start
+filetype plugin indent on
+
+"Solarized theme:
+Bundle 'altercation/vim-colors-solarized'
+set background=dark
+let g:solarized_termcolors = 256
+colorscheme solarized
+
+"Pathogen
+execute pathogen#infect()
+
+"Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
+"Set tabs to four spaces
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
