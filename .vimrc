@@ -22,3 +22,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 "Set tabs to four spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+"Automatically remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
